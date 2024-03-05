@@ -243,6 +243,9 @@ class MatchPresentation(PresentationBase):
         if response is None:
             raise InconsistentMessageError(str(message))
 
+        if "game_restore" not in response:
+            return
+
         game_restore = response["game_restore"]
 
         if game_restore["game_state"] != 1:
