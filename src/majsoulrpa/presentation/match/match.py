@@ -99,6 +99,7 @@ class MatchPresentation(PresentationBase):
         ".lq.Lobby.oauth2Login",
         ".lq.FastTest.checkNetworkDelay",
         ".lq.FastTest.fetchGamePlayerState",
+        ".lq.FastTest.finishSyncGame",
         ".lq.NotifyPlayerConnectionState",
         ".lq.NotifyGameBroadcast",
         ".lq.PlayerLeaving",
@@ -156,6 +157,7 @@ class MatchPresentation(PresentationBase):
                 return
             case (
                 ".lq.FastTest.fetchGamePlayerState"
+                | ".lq.FastTest.finishSyncGame"
                 | ".lq.NotifyPlayerConnectionState"
             ):
                 logger.info(message)
